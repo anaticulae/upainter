@@ -7,16 +7,13 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import io
+import painter
+import tests.test_histogram
 
 
-def save(figure, path: str, format_: str = 'png'):
-    figure.savefig(path, format=format_)
-
-
-def png(figure) -> bytes:
-    buffer = io.BytesIO()
-    # write to buffer
-    save(figure, buffer)
-    result = buffer.getvalue()
-    return result
+def test_png():
+    rendered = tests.test_histogram.histogram_example()
+    # render into bytes
+    result = painter.png(rendered)
+    assert isinstance(result, bytes)
+    assert len(result) > 10000

@@ -10,6 +10,7 @@
 import os
 
 from painter.histogram import render as histogram_render
+from painter.writer import png
 from painter.writer import save
 
 __version__ = '0.1.0'
