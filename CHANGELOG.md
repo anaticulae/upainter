@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.3.1
+
+### Fix
+
+* avoid problems with tkinter back end (a21c035d529c)
+
 ## v0.3.0
 
 ### Feature
