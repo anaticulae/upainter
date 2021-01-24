@@ -7,26 +7,21 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import matplotlib.figure
 import matplotlib.pyplot as plt
 
-import painter.utils
 
+def configure(**kwargs):
+    width = kwargs.get('width', 5.12)  # 512 pixel
+    height = kwargs.get('height', 5.12)  # 512 pixel
+    xlabel = kwargs.get('xlabel', None)
+    ylabel = kwargs.get('ylabel', None)
+    title = kwargs.get('title', None)
 
-def render(
-        data: list,
-        width: float = 5.12,  # 512 pixel
-        height: float = 5.12,  # 512 pixel
-        title: str = None,
-        xlabel: str = None,
-        ylabel: str = None,
-) -> matplotlib.figure.Figure:
-    fig, _ = painter.utils.configure(
-        width=width,
-        height=height,
-        title=title,
-        xlabel=xlabel,
-        ylabel=ylabel,
-    )
-    plt.hist(data)
-    return fig
+    fig, ax = plt.subplots(figsize=(width, height))
+    if xlabel:
+        plt.xlabel(xlabel, fontsize=20)
+    if ylabel:
+        plt.ylabel(ylabel, fontsize=20)
+    if title:
+        plt.title(title, fontsize=30)
+    return fig, ax
