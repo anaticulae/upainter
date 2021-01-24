@@ -16,6 +16,7 @@ def configure(**kwargs):
     xlabel = kwargs.get('xlabel', None)
     ylabel = kwargs.get('ylabel', None)
     title = kwargs.get('title', None)
+    grid = kwargs.get('grid', False)
 
     fig, ax = plt.subplots(figsize=(width, height))
     if xlabel:
@@ -24,4 +25,5 @@ def configure(**kwargs):
         plt.ylabel(ylabel, fontsize=20)
     if title:
         plt.title(title, fontsize=30)
+    ax.grid(grid)
     return fig, ax
