@@ -14,8 +14,7 @@ import pytest
 import painter
 
 
-@pytest.mark.usefixtures('testdir')
-def test_histogram_render():
+def histogram_example():
     data = [1994, 1998, 2002, 2002, 2003, 2000]
     rendered = painter.histogram_render(
         data,
@@ -25,5 +24,11 @@ def test_histogram_render():
         xlabel='user',
         ylabel='note',
     )
+    return rendered
+
+
+@pytest.mark.usefixtures('testdir')
+def test_histogram_render():
+    rendered = histogram_example()
     painter.save(rendered, 'figure')
     assert os.path.exists('figure')
