@@ -9,6 +9,7 @@
 
 import os
 
+from painter.bar import render as bar_render
 from painter.histogram import render as histogram_render
 from painter.writer import png
 from painter.writer import save
