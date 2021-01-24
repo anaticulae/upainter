@@ -6,7 +6,11 @@
 # use or distribution is an offensive act against international law and may
 # be prosecuted under federal law. Its content is company confidential.
 #==============================================================================
+
 import os
+
+from painter.histogram import render as histogram_render
+from painter.writer import save
 
 __version__ = '0.0.0'
 
