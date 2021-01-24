@@ -17,13 +17,15 @@ def configure(**kwargs):
     ylabel = kwargs.get('ylabel', None)
     title = kwargs.get('title', None)
     grid = kwargs.get('grid', False)
+    title_fontsize = kwargs.get('title_fontsize', 30)
+    label_fontsize = kwargs.get('label_fontsize', 20)
 
     fig, ax = plt.subplots(figsize=(width, height))  # pylint:disable=C0103
     if xlabel:
-        plt.xlabel(xlabel, fontsize=20)
+        plt.xlabel(xlabel, fontsize=label_fontsize)
     if ylabel:
-        plt.ylabel(ylabel, fontsize=20)
+        plt.ylabel(ylabel, fontsize=label_fontsize)
     if title:
-        plt.title(title, fontsize=30)
+        plt.title(title, fontsize=title_fontsize)
     ax.grid(grid)
     return fig, ax
