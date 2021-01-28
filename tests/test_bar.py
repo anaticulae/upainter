@@ -23,3 +23,12 @@ def test_bar_render():
     )
     assert rendered
     tests.show_figure(rendered)
+
+
+def test_bar_render_empty():
+    data = []
+    rendered = painter.bar_render(
+        x=data,
+        y=data,
+    )
+    assert rendered is None

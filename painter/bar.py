@@ -16,6 +16,8 @@ import painter.utils
 
 def render(x, y, **kwargs) -> matplotlib.figure.Figure:  # pylint:disable=C0103
     fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
+    if not y:
+        return None
     ymax = max(y) * 1.1
     ax.set_ylim((0, ymax))
     plt.bar(x=x, height=y, width=0.5)
