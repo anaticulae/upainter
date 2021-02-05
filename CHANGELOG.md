@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.3.2
+
+### Feature
+
+* add xlim  to adjust bar plot (9f274f06d1e6)
+* return None for empty data plot (8a966affe414)
+
 ## v0.3.1
 
 ### Fix
