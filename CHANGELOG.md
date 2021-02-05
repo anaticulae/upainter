@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.3.3
+
+### Fix
+
+* do not set ylim if limit is zero (a0cf45f5a45d)
+
 ## v0.3.2
 
 ### Feature
