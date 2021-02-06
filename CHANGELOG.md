@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.5.2
+
+### Fix
+
+* ensure that binary show works (e1a96a6301ba)
+
 ## v0.5.1
 
 ### Feature

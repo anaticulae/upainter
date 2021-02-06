@@ -17,6 +17,6 @@ from painter.test import show_figure
 from painter.writer import png
 from painter.writer import save
 
-__version__ = '0.5.1'
+__version__ = '0.5.2'
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
