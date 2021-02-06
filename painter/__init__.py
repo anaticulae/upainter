@@ -16,6 +16,6 @@ from painter.pie import render as pie_render
 from painter.writer import png
 from painter.writer import save
 
-__version__ = '0.3.3'
+__version__ = '0.4.0'
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))

@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.4.0
+
+### Feature
+
+* add method to render pie plot (14a7196992c3)
+
 ## v0.3.3
 
 ### Fix
