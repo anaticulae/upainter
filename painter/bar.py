@@ -18,11 +18,10 @@ def render(x, y, **kwargs) -> matplotlib.figure.Figure:  # pylint:disable=C0103
     fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
     if not y:
         return None
-    xlim = kwargs.get('xlim', None)
-    if xlim:
-        ax.set_xlim(xlim)
-    ymax = max(y) * 1.1
-    if ymax:
-        ax.set_ylim((0, ymax))
+    ylim = kwargs.get('ylim', None)
+    if not ylim:
+        ymax = max(y) * 1.1
+        if ymax:
+            ax.set_ylim((0, ymax))
     plt.bar(x=x, height=y, width=0.5)
     return fig

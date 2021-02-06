@@ -19,6 +19,8 @@ def configure(**kwargs):
     grid = kwargs.get('grid', False)
     title_fontsize = kwargs.get('title_fontsize', 30)
     label_fontsize = kwargs.get('label_fontsize', 20)
+    xlim = kwargs.get('xlim', None)
+    ylim = kwargs.get('ylim', None)
 
     fig, ax = plt.subplots(figsize=(width, height))  # pylint:disable=C0103
     if xlabel:
@@ -27,5 +29,9 @@ def configure(**kwargs):
         plt.ylabel(ylabel, fontsize=label_fontsize)
     if title:
         plt.title(title, fontsize=title_fontsize)
+    if xlim:
+        ax.set_xlim(xlim)
+    if ylim:
+        ax.set_ylim(ylim)
     ax.grid(grid)
     return fig, ax
