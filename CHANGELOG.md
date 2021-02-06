@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.5.1
+
+### Feature
+
+* add option to show png from path (1dfdbd0ebef2)
+
 ## v0.5.0
 
 ### Feature
