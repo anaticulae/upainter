@@ -18,9 +18,12 @@ import painter
 def show_figure(figure):
     if not utilatest.single_execution():
         return
-    with utila.make_tmpdir(root=__file__) as temp:
-        png = str(os.path.join(temp, 'painted.png'))
-        # write png
-        painter.save(figure, png)
-        # open png
-        utila.run(f'start {png}')
+    if not utila.exists(figure):
+        with utila.make_tmpdir(root=__file__) as temp:
+            png = os.path.join(temp, 'painted.png')
+            # write png
+            painter.save(figure, png)
+    else:
+        png = figure
+    # open png
+    utila.run(f'start {png}')
