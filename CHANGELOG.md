@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.5.0
+
+### Feature
+
+* add method to display rendered figure (ab9af71e7e86)
+
 ## v0.4.0
 
 ### Feature
