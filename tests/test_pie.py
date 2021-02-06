@@ -8,7 +8,6 @@
 # =============================================================================
 
 import painter
-import tests
 
 
 def test_pie_render():
@@ -25,4 +24,4 @@ def test_pie_render():
         labels=labels,
     )
     assert rendered
-    tests.show_figure(rendered)
+    painter.show_figure(rendered)

@@ -7,27 +7,20 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import os
+
+import utila
+import utilatest
+
 import painter
 
 
-def test_bar_render_with_labels():
-    data = [0, 1, 2, 3, 4, 5, 6, 7]
-    rendered = painter.bar_render(
-        x=data,
-        y=data,
-        title='simple bar plot',
-        xlabel='bottom',
-        ylabel='left',
-        grid=True,
-    )
-    assert rendered
-    painter.show_figure(rendered)
-
-
-def test_bar_render_empty():
-    data = []
-    rendered = painter.bar_render(
-        x=data,
-        y=data,
-    )
-    assert rendered is None
+def show_figure(figure):
+    if not utilatest.single_execution():
+        return
+    with utila.make_tmpdir(root=__file__) as temp:
+        png = str(os.path.join(temp, 'painted.png'))
+        # write png
+        painter.save(figure, png)
+        # open png
+        utila.run(f'start {png}')
