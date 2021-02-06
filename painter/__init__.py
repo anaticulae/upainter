@@ -12,6 +12,7 @@ import os
 import painter.__backend__
 from painter.bar import render as bar_render
 from painter.histogram import render as histogram_render
+from painter.pie import render as pie_render
 from painter.writer import png
 from painter.writer import save
 
