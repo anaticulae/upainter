@@ -22,7 +22,10 @@ def show_figure(figure):
         with utila.make_tmpdir(root=__file__) as temp:
             png = os.path.join(temp, 'painted.png')
             # write png
-            painter.save(figure, png)
+            if isinstance(figure, bytes):
+                utila.file_create_binary(png, figure)
+            else:
+                painter.save(figure, png)
     else:
         png = figure
     # open png
