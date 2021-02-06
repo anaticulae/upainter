@@ -11,7 +11,7 @@ import painter
 import tests
 
 
-def test_bar_render():
+def test_bar_render_with_labels():
     data = [0, 1, 2, 3, 4, 5, 6, 7]
     rendered = painter.bar_render(
         x=data,
