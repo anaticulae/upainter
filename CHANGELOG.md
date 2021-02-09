@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.6.0
+
+### Feature
+
+* add line plot renderer (79232dcfd00b)
+* add line style generator (e00991290a9e)
+
 ## v0.5.2
 
 ### Fix
