@@ -35,3 +35,41 @@ def configure(**kwargs):
         ax.set_ylim(ylim)
     ax.grid(grid)
     return fig, ax
+
+
+# ``'b'``          blue
+# ``'g'``          green
+# ``'r'``          red
+# ``'c'``          cyan
+# ``'m'``          magenta
+# ``'y'``          yellow
+# ``'k'``          black
+# ``'w'``          white
+
+COLOR = [
+    'b',
+    'g',
+    'r',
+    'c',
+    'm',
+    'y',
+    'k',
+]
+
+# ``'-'``          solid line style
+# ``'--'``         dashed line style
+# ``'-.'``         dash-dot line style
+# ``':'``          dotted line style
+
+STYLE = [
+    '-',
+    '--',
+    '-.',
+    ':',
+]
+
+
+def linestyle():
+    for color in COLOR:
+        for style in STYLE:
+            yield f'{color}{style}'
