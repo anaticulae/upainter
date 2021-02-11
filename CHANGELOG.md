@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.6.1
+
+### Feature
+
+* add option to close figure after converting to png (a60ab5c20a3a)
+
 ## v0.6.0
 
 ### Feature
