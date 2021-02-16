@@ -28,6 +28,9 @@ def render(
     if labels:
         ax.xaxis.set_major_formatter(painter.__patch__.IndexFormatter(labels))
         ax.xaxis.set_major_locator(matplotlib.ticker.IndexLocator(1, 0))
+    ncol = kwargs.get('ncol', 10)
+    ncol = int(len(legends) / ncol) + 1
+    frameon = kwargs.get('frameon', True)
     if legends:
-        ax.legend(legends, loc='upper right', frameon=False)
+        ax.legend(legends, ncol=ncol, loc='upper left', frameon=frameon)
     return fig

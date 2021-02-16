@@ -23,6 +23,7 @@ def test_plot_render():
         labels=labels,
         width=15.0,
         legends=legends,
+        ncol=5,
     )
     assert rendered
     painter.show_figure(rendered)
