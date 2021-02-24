@@ -24,8 +24,6 @@ def render(
     if not args:
         raise ValueError(f'empty data: {args}')
     fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
-    for line, style in zip(args, painter.utils.linestyle()):
-        matplotlib.pyplot.plot(line, style)
 
     if labels:
         ax.xaxis.set_major_formatter(painter.__patch__.IndexFormatter(labels))
@@ -35,4 +33,7 @@ def render(
     frameon = kwargs.get('frameon', True)
     if legends:
         ax.legend(legends, ncol=ncol, loc='upper left', frameon=frameon)
+
+    for line, style in zip(args, painter.utils.linestyle()):
+        matplotlib.pyplot.plot(line, style)
     return fig
