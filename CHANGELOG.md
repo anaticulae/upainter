@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.7.0
+
+### Feature
+
+* inform user about empty rendering (70912c178f4e)
+* add options to define legend (40e93f0c15a7)
+
 ## v0.6.1
 
 ### Feature
