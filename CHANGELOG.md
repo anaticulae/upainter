@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.7.1
+
+### Fix
+
+* revert configure order (b070eeeea101)
+
 ## v0.7.0
 
 ### Feature
