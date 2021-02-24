@@ -21,6 +21,8 @@ def render(
         legends=None,
         **kwargs,
 ) -> matplotlib.figure.Figure:
+    if not args:
+        raise ValueError(f'empty data: {args}')
     fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
     for line, style in zip(args, painter.utils.linestyle()):
         matplotlib.pyplot.plot(line, style)
