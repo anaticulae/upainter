@@ -31,9 +31,9 @@ def render(
     ncol = kwargs.get('ncol', 10)
     ncol = int(len(legends) / ncol) + 1
     frameon = kwargs.get('frameon', True)
-    if legends:
-        ax.legend(legends, ncol=ncol, loc='upper left', frameon=frameon)
-
     for line, style in zip(args, painter.utils.linestyle()):
         matplotlib.pyplot.plot(line, style)
+
+    if legends:
+        ax.legend(legends, ncol=ncol, loc='upper left', frameon=frameon)
     return fig
