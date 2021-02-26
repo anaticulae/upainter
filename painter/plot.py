@@ -28,12 +28,12 @@ def render(
     if labels:
         ax.xaxis.set_major_formatter(painter.__patch__.IndexFormatter(labels))
         ax.xaxis.set_major_locator(matplotlib.ticker.IndexLocator(1, 0))
-    ncol = kwargs.get('ncol', 10)
-    ncol = int(len(legends) / ncol) + 1
     frameon = kwargs.get('frameon', True)
     for line, style in zip(args, painter.utils.linestyle()):
         matplotlib.pyplot.plot(line, style)
 
     if legends:
+        ncol = kwargs.get('ncol', 10)
+        ncol = int(len(legends) / ncol) + 1
         ax.legend(legends, ncol=ncol, loc='upper left', frameon=frameon)
     return fig
