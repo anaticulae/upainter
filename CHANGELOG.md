@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.7.2
+
+### Fix
+
+* just compute if legends are given (cf70c4822d7a)
+
 ## v0.7.1
 
 ### Fix
