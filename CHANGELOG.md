@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.8.0
+
+### Feature
+
+* add scatter plot renderer (83e8a7771a44)
+
 ## v0.7.2
 
 ### Fix
