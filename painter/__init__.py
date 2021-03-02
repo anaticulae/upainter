@@ -14,6 +14,7 @@ from painter.bar import render as bar_render
 from painter.histogram import render as histogram_render
 from painter.pie import render as pie_render
 from painter.plot import render as plot_render
+from painter.scatter import render as scatter_render
 from painter.test import show_figure
 from painter.utils import linestyle
 from painter.writer import close_figure
