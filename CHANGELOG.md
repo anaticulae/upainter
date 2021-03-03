@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.9.1
+
+### Fix
+
+* ensure that non markers works correctly (d07aec038546)
+
 ## v0.9.0
 
 ### Feature
