@@ -13,6 +13,7 @@ import painter
 
 
 def test_scatter_render_colored_legend():
+    # BUG: COLOR OF MARKER AND LEGEND DIFFERS!
     x, y = [10, 20, 15, 12, 50], [50, 20, 10, 33, 14]
     legend = [
         (133, 'first'),
@@ -29,6 +30,8 @@ def test_scatter_render_colored_legend():
     )
     assert rendered
     painter.show_figure(rendered)
+    rendered = painter.png(rendered)
+    assert len(rendered) == 17177  # rendering changes, verify figure!
 
 
 def test_scatter_render_legend_no_value():
@@ -49,6 +52,8 @@ def test_scatter_render_legend_no_value():
     )
     assert rendered
     painter.show_figure(rendered)
+    rendered = painter.png(rendered)
+    assert len(rendered) == 17564  # rendering changes, verify figure!
 
 
 def test_scatter_empty():
