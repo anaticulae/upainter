@@ -31,7 +31,7 @@ def test_scatter_render_colored_legend():
     assert rendered
     painter.show_figure(rendered)
     rendered = painter.png(rendered)
-    assert len(rendered) == 17177  # rendering changes, verify figure!
+    assert len(rendered) == 17519  # rendering changes, verify figure!
 
 
 def test_scatter_render_legend_no_value():
@@ -54,6 +54,15 @@ def test_scatter_render_legend_no_value():
     painter.show_figure(rendered)
     rendered = painter.png(rendered)
     assert len(rendered) == 17564  # rendering changes, verify figure!
+
+
+def test_scatter_render_no_marker():
+    x, y = [10, 20, 15, 12, 50], [50, 20, 10, 33, 14]
+    rendered = painter.scatter_render(x, y)
+    assert rendered
+    painter.show_figure(rendered)
+    rendered = painter.png(rendered)
+    assert len(rendered) == 10400  # rendering changes, verify figure!
 
 
 def test_scatter_empty():

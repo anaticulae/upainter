@@ -86,3 +86,7 @@ MARKERS = 'ov<>1234s'
 
 def markers():
     return itertools.cycle(MARKERS)
+
+
+def default_markers():
+    return itertools.cycle('o')

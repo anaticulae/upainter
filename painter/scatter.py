@@ -34,15 +34,17 @@ def render(
         raise ValueError('legend must be the same size')
     fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
 
-    marker = marker if marker else painter.markers()
-    legend = legend if legend else itertools.cycle(None)
+    marker = marker if marker else painter.default_markers()
+    legend = legend if legend else itertools.cycle([None])
 
     for xx, yy, cc, mm, ll in zip(x, y, painter.colors(), marker, legend):  # pylint:disable=C0103
-        if not isinstance(ll, str):
+        if ll and not isinstance(ll, str):
             cc, ll = ll  # pylint:disable=C0103
         if ll:
             ax.scatter(xx, yy, c=cc, marker=mm, label=ll)
         else:
             ax.scatter(xx, yy, c=cc, marker=mm)
-    ax.legend()
+    # check that iter is not None-Iter
+    if isinstance(legend, list):
+        ax.legend()
     return fig
