@@ -16,7 +16,9 @@ from painter.pie import render as pie_render
 from painter.plot import render as plot_render
 from painter.scatter import render as scatter_render
 from painter.test import show_figure
+from painter.utils import colors
 from painter.utils import linestyle
+from painter.utils import markers
 from painter.writer import close_figure
 from painter.writer import png
 from painter.writer import save

@@ -7,6 +7,8 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import itertools
+
 import matplotlib.pyplot as plt
 
 
@@ -73,3 +75,14 @@ def linestyle():
     for color in COLOR:
         for style in STYLE:
             yield f'{color}{style}'
+
+
+def colors():
+    return itertools.cycle(COLOR)
+
+
+MARKERS = 'ov<>1234s'
+
+
+def markers():
+    return itertools.cycle(MARKERS)
