@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.9.0
+
+### Feature
+
+* add option to use different colors and markers (09b0be8f284a)
+* add helper to generate colors and markers (9527d0d3a387)
+
 ## v0.8.0
 
 ### Feature
