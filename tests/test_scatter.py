@@ -44,6 +44,7 @@ def test_scatter_render_legend_no_value():
         x,
         y,
         legend=legend,
+        marker='xdoDx',
         grid=True,
     )
     assert rendered

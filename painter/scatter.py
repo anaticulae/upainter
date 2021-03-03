@@ -7,9 +7,11 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import matplotlib.figure
-import matplotlib.pyplot as plt
+import itertools
 
+import matplotlib.figure
+
+import painter
 import painter.utils
 
 
@@ -17,6 +19,7 @@ def render(
         x,
         y,
         legend=None,
+        marker=None,
         **kwargs,
 ) -> matplotlib.figure.Figure:
     """\
@@ -29,18 +32,17 @@ def render(
     legend = legend if legend else []
     if legend and len(legend) != len(x):
         raise ValueError('legend must be the same size')
-    fig, _ = painter.utils.configure(**kwargs)  # pylint:disable=C0103
+    fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
 
-    color = []
-    if legend:
-        if len(legend[0]) == 2:
-            color = [item[0] for item in legend]
+    marker = marker if marker else painter.markers()
+    legend = legend if legend else itertools.cycle(None)
+
+    for xx, yy, cc, mm, ll in zip(x, y, painter.colors(), marker, legend):  # pylint:disable=C0103
+        if not isinstance(ll, str):
+            cc, ll = ll  # pylint:disable=C0103
+        if ll:
+            ax.scatter(xx, yy, c=cc, marker=mm, label=ll)
         else:
-            color = [idx for idx, _ in enumerate(legend)]
-
-    scatter = plt.scatter(x, y, c=color)
-
-    data = [item if isinstance(item, str) else item[1] for item in legend]
-    legend = (scatter.legend_elements()[0], data)
-    plt.legend(*legend)
+            ax.scatter(xx, yy, c=cc, marker=mm)
+    ax.legend()
     return fig
