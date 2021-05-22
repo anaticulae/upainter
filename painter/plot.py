@@ -16,10 +16,10 @@ import painter.utils
 
 
 def render(
-        *args,
-        labels=None,
-        legends=None,
-        **kwargs,
+    *args,
+    labels=None,
+    legends=None,
+    **kwargs,
 ) -> matplotlib.figure.Figure:
     if not args:
         raise ValueError(f'empty data: {args}')

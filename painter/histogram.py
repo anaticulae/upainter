@@ -14,12 +14,12 @@ import painter.utils
 
 
 def render(
-        data: list,
-        width: float = 5.12,  # 512 pixel
-        height: float = 5.12,  # 512 pixel
-        title: str = None,
-        xlabel: str = None,
-        ylabel: str = None,
+    data: list,
+    width: float = 5.12,  # 512 pixel
+    height: float = 5.12,  # 512 pixel
+    title: str = None,
+    xlabel: str = None,
+    ylabel: str = None,
 ) -> matplotlib.figure.Figure:
     fig, _ = painter.utils.configure(
         width=width,

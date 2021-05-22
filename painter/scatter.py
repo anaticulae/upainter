@@ -16,11 +16,11 @@ import painter.utils
 
 
 def render(
-        x,
-        y,
-        legend=None,
-        marker=None,
-        **kwargs,
+    x,
+    y,
+    legend=None,
+    marker=None,
+    **kwargs,
 ) -> matplotlib.figure.Figure:
     """\
     #absolute: use values instead of percentage

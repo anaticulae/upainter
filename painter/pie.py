@@ -14,10 +14,10 @@ import painter.utils
 
 
 def render(
-        x,
-        labels=None,
-        absolute: bool = True,
-        **kwargs,
+    x,
+    labels=None,
+    absolute: bool = True,
+    **kwargs,
 ) -> matplotlib.figure.Figure:
     """\
     #absolute: use values instead of percentage
