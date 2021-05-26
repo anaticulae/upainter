@@ -35,7 +35,7 @@ def render(
     fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
 
     marker = marker if marker else painter.default_markers()
-    legend = legend if legend else itertools.cycle([None])
+    legend: itertools.cycle = legend if legend else itertools.cycle([None])
 
     for xx, yy, cc, mm, ll in zip(x, y, painter.colors(), marker, legend):  # pylint:disable=C0103
         if ll and not isinstance(ll, str):
