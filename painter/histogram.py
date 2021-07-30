@@ -8,7 +8,7 @@
 # =============================================================================
 
 import matplotlib.figure
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 
 import painter.utils
 
@@ -28,5 +28,5 @@ def render(
         xlabel=xlabel,
         ylabel=ylabel,
     )
-    plt.hist(data)
+    matplotlib.pyplot.hist(data)
     return fig

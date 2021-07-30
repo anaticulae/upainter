@@ -8,7 +8,7 @@
 # =============================================================================
 
 import matplotlib.figure
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 
 import painter.utils
 
@@ -29,7 +29,7 @@ def render(
         sums = sum(x)
         return '%d' % (sums * item / 100)
 
-    plt.pie(
+    matplotlib.pyplot.pie(
         x=x,
         labels=labels,
         radius=1,

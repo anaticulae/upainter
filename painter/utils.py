@@ -9,7 +9,7 @@
 
 import itertools
 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 
 
 def configure(**kwargs):
@@ -24,13 +24,13 @@ def configure(**kwargs):
     xlim = kwargs.get('xlim', None)
     ylim = kwargs.get('ylim', None)
 
-    fig, ax = plt.subplots(figsize=(width, height))  # pylint:disable=C0103
+    fig, ax = matplotlib.pyplot.subplots(figsize=(width, height))  # pylint:disable=C0103
     if xlabel:
-        plt.xlabel(xlabel, fontsize=label_fontsize)
+        matplotlib.pyplot.xlabel(xlabel, fontsize=label_fontsize)
     if ylabel:
-        plt.ylabel(ylabel, fontsize=label_fontsize)
+        matplotlib.pyplot.ylabel(ylabel, fontsize=label_fontsize)
     if title:
-        plt.title(title, fontsize=title_fontsize)
+        matplotlib.pyplot.title(title, fontsize=title_fontsize)
     if xlim:
         ax.set_xlim(xlim)
     if ylim:

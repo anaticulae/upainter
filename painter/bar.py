@@ -9,7 +9,7 @@
 # =============================================================================
 
 import matplotlib.figure
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 
 import painter.utils
 
@@ -23,5 +23,5 @@ def render(x, y, **kwargs) -> matplotlib.figure.Figure:  # pylint:disable=C0103
         ymax = max(y) * 1.1
         if ymax:
             ax.set_ylim((0, ymax))
-    plt.bar(x=x, height=y, width=0.5)
+    matplotlib.pyplot.bar(x=x, height=y, width=0.5)
     return fig
