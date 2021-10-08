@@ -24,15 +24,16 @@ def render(
     if not args:
         raise ValueError(f'empty data: {args}')
     fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
-
+    # render x-label if given
     if labels:
         ax.xaxis.set_major_formatter(painter.__patch__.IndexFormatter(labels))
         ax.xaxis.set_major_locator(matplotlib.ticker.IndexLocator(1, 0))
-    frameon = kwargs.get('frameon', True)
+    # render math content
     for line, style in zip(args, painter.utils.linestyle()):
         matplotlib.pyplot.plot(line, style)
-
+    # render legends if given
     if legends:
+        frameon = kwargs.get('frameon', True)
         ncol = kwargs.get('ncol', 10)
         ncol = int(len(legends) / ncol) + 1
         ax.legend(legends, ncol=ncol, loc='upper left', frameon=frameon)
