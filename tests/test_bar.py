@@ -31,3 +31,15 @@ def test_bar_render_empty():
         y=data,
     )
     assert rendered is None
+
+
+def test_bar_render_ints():
+    rendered = painter.bar_render(
+        x=[1, 2, 3, 4],
+        y=[1, 2, 3, 4],
+        intlabel=(False, True),
+    )
+    assert rendered
+    painter.show_figure(rendered)
+    rendered = painter.png(rendered)
+    assert len(rendered) == 6174  # rendering changes, verify figure!

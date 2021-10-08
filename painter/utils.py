@@ -13,7 +13,7 @@ import matplotlib.pyplot
 import matplotlib.ticker
 
 
-def configure(**kwargs):
+def configure(**kwargs):  # pylint:disable=R1260
     width = kwargs.get('width', 5.12)  # 512 pixel
     height = kwargs.get('height', 5.12)  # 512 pixel
     xlabel = kwargs.get('xlabel', None)
@@ -24,7 +24,9 @@ def configure(**kwargs):
     label_fontsize = kwargs.get('label_fontsize', 20)
     xlim = kwargs.get('xlim', None)
     ylim = kwargs.get('ylim', None)
-
+    intlabel = kwargs.get('intlabel', None)
+    if 'intlabel' in kwargs:
+        del kwargs['intlabel']
     fig, ax = matplotlib.pyplot.subplots(figsize=(width, height))  # pylint:disable=C0103
     if xlabel:
         matplotlib.pyplot.xlabel(xlabel, fontsize=label_fontsize)
@@ -36,6 +38,13 @@ def configure(**kwargs):
         ax.set_xlim(xlim)
     if ylim:
         ax.set_ylim(ylim)
+    if intlabel:
+        if isinstance(intlabel, bool):
+            intlabel = True, True
+        if intlabel[0]:
+            ax.xaxis.set_major_formatter(IntFormatter())
+        if intlabel[1]:
+            ax.yaxis.set_major_formatter(IntFormatter())
     ax.grid(grid)
     return fig, ax
 
