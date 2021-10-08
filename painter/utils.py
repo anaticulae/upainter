@@ -10,6 +10,7 @@
 import itertools
 
 import matplotlib.pyplot
+import matplotlib.ticker
 
 
 def configure(**kwargs):
@@ -37,6 +38,17 @@ def configure(**kwargs):
         ax.set_ylim(ylim)
     ax.grid(grid)
     return fig, ax
+
+
+class IntFormatter(matplotlib.ticker.FuncFormatter):
+    """Round every label element."""
+
+    def __init__(self):
+        super().__init__(func=IntFormatter.equal)
+
+    @staticmethod
+    def equal(item, _):  # pylint:disable=W0613
+        return '%d' % item if int(item) == item else ''
 
 
 # ``'b'``          blue
