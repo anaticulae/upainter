@@ -22,7 +22,7 @@ def render(
     """\
     #absolute: use values instead of percentage
     """
-    fig, _ = painter.utils.configure(**kwargs)  # pylint:disable=C0103
+    fig = painter.utils.configure(**kwargs)[0]
     label_fontsize = kwargs.get('label_fontsize', 20)
 
     def selector(item):
