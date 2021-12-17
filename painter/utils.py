@@ -14,6 +14,8 @@ import matplotlib.pyplot
 import matplotlib.ticker
 import PIL.Image
 
+import painter
+
 
 def configure(**kwargs):  # pylint:disable=R1260
     width = kwargs.get('width', 5.12)  # 512 pixel
@@ -118,3 +120,21 @@ def default_markers():
 def image_frombytes(png):
     assert isinstance(png, bytes), type(png)
     return PIL.Image.open(io.BytesIO(png))
+
+
+def figure_toimage(figure):
+    png = painter.png(figure)
+    result = image_frombytes(png)
+    return result
+
+
+def entropy(image):
+    return image.entropy()
+
+
+def entropy_diff(image) -> float:
+    grayscaled = painter.gray(image)
+    before = entropy(image)
+    after = entropy(grayscaled)
+    diff = before - after
+    return diff
