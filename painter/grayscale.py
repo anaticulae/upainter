@@ -9,7 +9,10 @@
 
 import PIL.ImageOps
 
+import painter
+
 
 def gray(image):
+    image = painter.ensure_image(image)
     result = PIL.ImageOps.grayscale(image)
     return result

@@ -10,6 +10,7 @@
 import io
 import itertools
 
+import matplotlib.figure
 import matplotlib.pyplot
 import matplotlib.ticker
 import PIL.Image
@@ -128,6 +129,12 @@ def figure_toimage(figure):
     return result
 
 
+def ensure_image(image):
+    if isfigure(image):
+        image = figure_toimage(image)
+    return image
+
+
 def entropy(image):
     return image.entropy()
 
@@ -138,3 +145,11 @@ def entropy_diff(image) -> float:
     after = entropy(grayscaled)
     diff = before - after
     return diff
+
+
+def isfigure(image) -> bool:
+    return isinstance(image, matplotlib.figure.Figure)
+
+
+def isimage(image) -> bool:
+    return isinstance(image, PIL.Image.Image)

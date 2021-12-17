@@ -19,10 +19,13 @@ from painter.scatter import render as scatter_render
 from painter.test import show_figure
 from painter.utils import colors
 from painter.utils import default_markers
+from painter.utils import ensure_image
 from painter.utils import entropy
 from painter.utils import entropy_diff
 from painter.utils import figure_toimage
 from painter.utils import image_frombytes
+from painter.utils import isfigure
+from painter.utils import isimage
 from painter.utils import linestyle
 from painter.utils import markers
 from painter.writer import close_figure
