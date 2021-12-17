@@ -135,18 +135,6 @@ def ensure_image(image):
     return image
 
 
-def entropy(image):
-    return image.entropy()
-
-
-def entropy_diff(image) -> float:
-    grayscaled = painter.gray(image)
-    before = entropy(image)
-    after = entropy(grayscaled)
-    diff = before - after
-    return diff
-
-
 def isfigure(image) -> bool:
     return isinstance(image, matplotlib.figure.Figure)
 

@@ -11,6 +11,8 @@ import os
 
 import painter.__backend__
 from painter.bar import render as bar_render
+from painter.details import entropy
+from painter.details import entropy_diff
 from painter.grayscale import gray
 from painter.histogram import render as histogram_render
 from painter.pie import render as pie_render
@@ -20,8 +22,6 @@ from painter.test import show_figure
 from painter.utils import colors
 from painter.utils import default_markers
 from painter.utils import ensure_image
-from painter.utils import entropy
-from painter.utils import entropy_diff
 from painter.utils import figure_toimage
 from painter.utils import image_frombytes
 from painter.utils import isfigure

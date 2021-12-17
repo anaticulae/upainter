@@ -10,14 +10,13 @@
 import painter
 
 
-def test_gray(pie_example):
-    painted = pie_example
-    png = painter.png(painted)
-    image = painter.image_frombytes(png)
-    before = len(image.histogram())
-    # reduce amount of colors
-    gray = painter.gray(image)
-    after = len(gray.histogram())
-    # 1024 - 256
+def entropy(image):
+    return image.entropy()
+
+
+def entropy_diff(image) -> float:
+    grayscaled = painter.gray(image)
+    before = entropy(image)
+    after = entropy(grayscaled)
     diff = before - after
-    assert diff == 768
+    return diff

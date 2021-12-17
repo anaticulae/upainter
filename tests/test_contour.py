@@ -10,14 +10,13 @@
 import painter
 
 
-def test_gray(pie_example):
-    painted = pie_example
-    png = painter.png(painted)
-    image = painter.image_frombytes(png)
-    before = len(image.histogram())
-    # reduce amount of colors
-    gray = painter.gray(image)
-    after = len(gray.histogram())
-    # 1024 - 256
-    diff = before - after
-    assert diff == 768
+def test_entropy_diff(pie_example):
+    image = painter.figure_toimage(pie_example)
+    diff = painter.entropy_diff(image)
+    assert diff > 1.2
+
+
+def test_entropy_second(histogram_example):
+    image = painter.figure_toimage(histogram_example)
+    diff = painter.entropy_diff(image)
+    assert diff > 1.7
