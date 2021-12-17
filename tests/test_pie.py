@@ -7,10 +7,13 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import pytest
+
 import painter
 
 
-def test_pie_render():
+@pytest.fixture
+def pie_example():
     data = [1, 1, 2, 3, 4]
     labels = [
         'Alf',
@@ -23,5 +26,10 @@ def test_pie_render():
         x=data,
         labels=labels,
     )
+    return rendered
+
+
+def test_pie_render(pie_example):  # pylint:disable=W0621
+    rendered = pie_example
     assert rendered
     painter.show_figure(rendered)

@@ -9,4 +9,6 @@
 
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
 
+# pylint:disable=W0611,C0413
 from tests.test_histogram import histogram_example
+from tests.test_pie import pie_example
