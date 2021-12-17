@@ -27,3 +27,9 @@ def test_entropy_diff(pie_example):
     image = painter.figure_toimage(pie_example)
     diff = painter.entropy_diff(image)
     assert diff > 1.2
+
+
+def test_entropy_second(histogram_example):
+    image = painter.figure_toimage(histogram_example)
+    diff = painter.entropy_diff(image)
+    assert diff > 1.7
