@@ -8,11 +8,10 @@
 # =============================================================================
 
 import painter
-import tests.test_histogram
 
 
-def test_png():
-    rendered = tests.test_histogram.histogram_example()
+def test_png(histogram_example):
+    rendered = histogram_example
     # render into bytes
     result = painter.png(rendered)
     assert isinstance(result, bytes)

@@ -8,3 +8,5 @@
 # =============================================================================
 
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
+
+from tests.test_histogram import histogram_example

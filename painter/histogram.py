@@ -20,6 +20,7 @@ def render(
     title: str = None,
     xlabel: str = None,
     ylabel: str = None,
+    **kwargs,
 ) -> matplotlib.figure.Figure:
     fig, _ = painter.utils.configure(
         width=width,
@@ -27,6 +28,7 @@ def render(
         title=title,
         xlabel=xlabel,
         ylabel=ylabel,
+        **kwargs,
     )
     matplotlib.pyplot.hist(data)
     return fig
