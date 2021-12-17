@@ -18,6 +18,7 @@ from painter.scatter import render as scatter_render
 from painter.test import show_figure
 from painter.utils import colors
 from painter.utils import default_markers
+from painter.utils import image_frombytes
 from painter.utils import linestyle
 from painter.utils import markers
 from painter.writer import close_figure

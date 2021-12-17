@@ -7,10 +7,12 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import io
 import itertools
 
 import matplotlib.pyplot
 import matplotlib.ticker
+import PIL.Image
 
 
 def configure(**kwargs):  # pylint:disable=R1260
@@ -111,3 +113,8 @@ def markers():
 
 def default_markers():
     return itertools.cycle('o')
+
+
+def image_frombytes(png):
+    assert isinstance(png, bytes), type(png)
+    return PIL.Image.open(io.BytesIO(png))
