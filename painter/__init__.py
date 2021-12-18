@@ -11,6 +11,8 @@ import os
 
 import painter.__backend__
 from painter.bar import render as bar_render
+from painter.details import contour
+from painter.details import contour_diff
 from painter.details import entropy
 from painter.details import entropy_diff
 from painter.grayscale import gray

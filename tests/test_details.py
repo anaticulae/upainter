@@ -20,3 +20,9 @@ def test_entropy_second(histogram_example):
     image = painter.figure_toimage(histogram_example)
     diff = painter.entropy_diff(image)
     assert diff > 1.7
+
+
+def test_contour_diff(histogram_example):
+    """Histogram does not loses feature while grayscaling."""
+    diff = painter.contour_diff(histogram_example)
+    assert not diff

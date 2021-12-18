@@ -7,6 +7,8 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import PIL.ImageFilter
+
 import painter
 
 
@@ -20,3 +22,28 @@ def entropy_diff(image) -> float:
     after = entropy(grayscaled)
     diff = before - after
     return diff
+
+
+def contour(image):
+    image = painter.ensure_image(image)
+    return image.filter(PIL.ImageFilter.CONTOUR)
+
+
+def contour_diff(image):
+    image = painter.ensure_image(image)
+    before = contour(image)
+    before = feature_count(before)
+    grayscaled = image.convert('L')
+    after = contour(grayscaled)
+    after = feature_count(after)
+    diff = before - after
+    if diff > 0:
+        return diff
+    return 0
+
+
+def feature_count(image) -> int:
+    image = painter.ensure_image(image)
+    image = image.convert('L')
+    histo = image.histogram()[0]
+    return histo
