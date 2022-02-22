@@ -2,6 +2,21 @@
 
 Every noteable change is logged here.
 
+## v0.11.0
+
+### Feature
+
+* add option to always show a figure (5b04005dd3f3)
+* add method to determine feature loss while gray scaling (304a04cae30b)
+* ease using API due some auto conversions (de1db537c2a4)
+* add method to gray scale image and determine entropy (002ca0f29c56)
+* add method to create PIL.Image from bytes (e9bfaa6ed3c1)
+
+### Documentation
+
+* adjust modules path (490850faa3fd)
+* Happy New Year! (ae39b6364b0f)
+
 ## v0.10.0
 
 ### Feature
