@@ -20,6 +20,7 @@ def render(
     title: str = None,
     xlabel: str = None,
     ylabel: str = None,
+    hist: dict = None,
     **kwargs,
 ) -> matplotlib.figure.Figure:
     fig, _ = painter.utils.configure(
@@ -30,5 +31,7 @@ def render(
         ylabel=ylabel,
         **kwargs,
     )
-    matplotlib.pyplot.hist(data)
+    if hist is None:
+        hist = dict()
+    matplotlib.pyplot.hist(data, **hist)
     return fig
