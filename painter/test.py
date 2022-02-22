@@ -15,8 +15,8 @@ import utilatest
 import painter
 
 
-def show_figure(figure):
-    if not utilatest.single_execution():
+def show_figure(figure, always: bool = False):
+    if always or not utilatest.single_execution():
         return
     if not utila.exists(figure):
         with utila.make_tmpdir(root=__file__) as temp:
