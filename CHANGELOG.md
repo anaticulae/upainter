@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.11.1
+
+### Fix
+
+* fix always flag (5f0889a7f788)
+
 ## v0.11.0
 
 ### Feature
