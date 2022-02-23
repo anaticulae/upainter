@@ -20,7 +20,7 @@ from painter.histogram import render as histogram_render
 from painter.pie import render as pie_render
 from painter.plot import render as plot_render
 from painter.scatter import render as scatter_render
-from painter.test import show_figure
+from painter.show import show_figure
 from painter.utils import colors
 from painter.utils import default_markers
 from painter.utils import ensure_image
