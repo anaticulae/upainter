@@ -2,6 +2,16 @@
 
 Every noteable change is logged here.
 
+## v0.12.1
+
+### Feature
+
+* add parameter to change file name (7f9702c98749)
+
+### Fix
+
+* adjust image file directory (2abb304f9e57)
+
 ## v0.12.0
 
 ### Feature
