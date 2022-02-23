@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.12.0
+
+### Feature
+
+* add parameter to plot scatter as subplot (6aebb7c8a459)
+* add hist parameter to modify histogram plot (895f6aed0fd0)
+
 ## v0.11.1
 
 ### Fix
