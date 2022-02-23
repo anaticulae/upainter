@@ -20,6 +20,7 @@ def render(
     y,
     legend=None,
     marker=None,
+    subplot: bool = False,
     **kwargs,
 ) -> matplotlib.figure.Figure:
     """\
@@ -32,7 +33,10 @@ def render(
     legend = legend if legend else []
     if legend and len(legend) != len(x):
         raise ValueError('legend must be the same size')
-    fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
+    if not subplot:
+        fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
+    else:
+        fig, ax = None, matplotlib.pyplot
 
     marker = marker if marker else painter.default_markers()
     legend: itertools.cycle = legend if legend else itertools.cycle([None])
