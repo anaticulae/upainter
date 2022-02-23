@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.12.2
+
+### Fix
+
+* adjust path (39fac3a93b3c)
+
 ## v0.12.1
 
 ### Feature
