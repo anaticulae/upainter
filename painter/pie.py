@@ -29,6 +29,9 @@ def render(
         sums = sum(x)
         return '%d' % (sums * item / 100)
 
+    # remove empty label
+    x, labels = disable_empty(x, labels)
+    # render
     matplotlib.pyplot.pie(
         x=x,
         labels=labels,
@@ -37,3 +40,13 @@ def render(
         textprops=dict(size=label_fontsize),
     )
     return fig
+
+
+def disable_empty(data, labels) -> tuple:
+    if labels is None:
+        return data, labels
+    # remove empty label
+    labels = [label for datum, label in zip(data, labels) if datum]
+    # remove empty data
+    data = [item for item in data if item]
+    return data, labels
