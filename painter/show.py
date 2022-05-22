@@ -7,16 +7,16 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import contextlib
 import os
 
 import utila
-import utilatest
 
 import painter
 
 
 def show_figure(figure, always: bool = False, filename: str = 'painted.png'):
-    if not always and not utilatest.single_execution():
+    if not always and not single_execution():
         return
     if not utila.exists(figure):
         root = utila.path_parent(__file__)
@@ -33,3 +33,10 @@ def show_figure(figure, always: bool = False, filename: str = 'painted.png'):
         png = figure
     # open png
     utila.run(f'start {png}')
+
+
+def single_execution() -> bool:
+    with contextlib.suppress(ModuleNotFoundError):
+        import utilatest
+        return utilatest.single_execution()
+    return False
