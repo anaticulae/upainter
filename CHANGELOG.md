@@ -2,6 +2,16 @@
 
 Every noteable change is logged here.
 
+## v0.12.3
+
+### Feature
+
+* skip empty data item (0fd74b164d3d)
+
+### Fix
+
+* do not fail on missing utilatest (ca6829ce51d8)
+
 ## v0.12.2
 
 ### Fix
