@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.13.0 (2022-10-01)
+
+### Chore
+
+* add Jenkinsfile (a083390eac1d)
+* upgrade requirements.txt (90b4974c7c7b)
+
 ## v0.12.3
 
 ### Feature
