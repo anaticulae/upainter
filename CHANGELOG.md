@@ -2,6 +2,15 @@
 
 Every noteable change is logged here.
 
+## v0.13.1 (2022-10-10)
+
+### Chore
+
+* upgrade requirements.txt (7e4719656531)
+* convert nightly to all (eae8c602488c)
+* upgrade baw (44e2de23d44a)
+* do not run in privileged mode (cf09aa794e3e)
+
 ## v0.13.0 (2022-10-01)
 
 ### Chore
