@@ -32,6 +32,6 @@ def render(
         **kwargs,
     )
     if hist is None:
-        hist = dict()
+        hist = {}
     matplotlib.pyplot.hist(data, **hist)
     return fig

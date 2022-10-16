@@ -62,7 +62,7 @@ class IntFormatter(matplotlib.ticker.FuncFormatter):
 
     @staticmethod
     def equal(item, _):  # pylint:disable=W0613
-        return '%d' % item if int(item) == item else ''
+        return str(int(item)) if int(item) == item else ''
 
 
 # ``'b'``          blue

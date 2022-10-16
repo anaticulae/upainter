@@ -27,7 +27,7 @@ def render(
 
     def selector(item):
         sums = sum(x)
-        return '%d' % (sums * item / 100)
+        return '%d' % (sums * item / 100)  # pylint:disable=C0209
 
     # remove empty label
     x, labels = disable_empty(x, labels)
