@@ -34,6 +34,6 @@ from painter.writer import close_figure
 from painter.writer import png
 from painter.writer import save
 
-__version__ = '0.13.1'
+__version__ = '0.13.2'
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))

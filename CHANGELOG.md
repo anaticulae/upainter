@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.13.2 (2022-10-16)
+
+### Chore
+
+* upgrade baw (5e850dad8174)
+* upgrade requirements.txt (9c9e47cece06)
+
 ## v0.13.1 (2022-10-10)
 
 ### Chore
