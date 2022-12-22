@@ -7,8 +7,11 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
+from utilatest import mp  # pylint:disable=W0611
+from utilatest import td  # pylint:disable=W0611
 
 # pylint:disable=W0611,C0413
 from tests.test_histogram import histogram_example
 from tests.test_pie import pie_example
+
+pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name

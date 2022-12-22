@@ -29,7 +29,7 @@ def histogram_example():
     return rendered
 
 
-@pytest.mark.usefixtures('testdir')
+@pytest.mark.usefixtures('td')
 def test_histogram_render(histogram_example):  # pylint:disable=W0621
     painter.save(histogram_example, 'figure')
     assert os.path.exists('figure')

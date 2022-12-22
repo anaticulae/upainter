@@ -13,8 +13,8 @@ import painter
 
 
 def test_plot_render():
-    x = [item * 0.5 for item in utila.ranged_list(10)]
-    y = utila.ranged_list(10)
+    x = [item * 0.5 for item in utila.rlist(10)]
+    y = utila.rlist(10)
     legends = ['first', 'second']
     labels = [f'label {item}' for item in range(10)]
     rendered = painter.plot_render(
