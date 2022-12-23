@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.13.3 (2022-12-23)
+
+### Chore
+
+* upgrade requirements.txt (73a0e8eb526a)
+* upgrade pipeline (eccdf8e1b4d7)
+
 ## v0.13.2 (2022-10-16)
 
 ### Chore
