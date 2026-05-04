@@ -1,217 +1,539 @@
-# Changelog
+# CHANGELOG
 
-Every noteable change is logged here.
+
+## v1.0.0 (2026-05-04)
+
+### Chores
+
+- **ci**: Remove outdated jenkins file
+  ([`00b778a`](https://github.com/anaticulae/upainter/commit/00b778a42125622738b43be7a06000fc730e0d9d))
+
+- **docker**: Add dockerfile
+  ([`cbf91a6`](https://github.com/anaticulae/upainter/commit/cbf91a617537349471d76512c82e09f34ddde97b))
+
+- **github**: Add .github
+  ([`a83241b`](https://github.com/anaticulae/upainter/commit/a83241b08b9415307c7fc926fdcd63e1040b17f3))
+
+- **license**: Add LICENSE
+  ([`3389cef`](https://github.com/anaticulae/upainter/commit/3389cef9eb7b88d05b36c515b608ff7f30a45710))
+
+- **markdown**: Rename files
+  ([`b6a1ac6`](https://github.com/anaticulae/upainter/commit/b6a1ac60869630129a550e4d0dd36a0a2413b9ab))
+
+- **project**: Rename project
+  ([`8cd805a`](https://github.com/anaticulae/upainter/commit/8cd805ac0ec5c51e374319fb214cefd0e14bd8c8))
+
+- **pyproject**: Add modern setup approach
+  ([`ba7310b`](https://github.com/anaticulae/upainter/commit/ba7310b56e261b6942a3d75c4eb051c41f86a505))
+
+- **requirements**: Remove outdated files
+  ([`741c0c2`](https://github.com/anaticulae/upainter/commit/741c0c229bb72004afd27b4d41cd8a3e128bf594))
+
+- **setup**: Remove outdated setup
+  ([`843ee05`](https://github.com/anaticulae/upainter/commit/843ee05b2e1976282985e751acd98f7ed01cb5cc))
+
+### Refactoring
+
+- **linter**: Solver linter warnings
+  ([`3fb168a`](https://github.com/anaticulae/upainter/commit/3fb168a30891d56547175d9dbb1df6473139c503))
+
+- **packages**: Adjust name
+  ([`c953979`](https://github.com/anaticulae/upainter/commit/c953979d5f30f82cce2732c23392c030a89536b0))
+
+### Testing
+
+- **fix**: Adjust unit tests
+  ([`a2330d4`](https://github.com/anaticulae/upainter/commit/a2330d406b07ce8a124d89d887ca0a969712d8cf))
+
 
 ## v0.13.3 (2022-12-23)
 
-### Chore
+### Chores
 
-* upgrade requirements.txt (73a0e8eb526a)
-* upgrade pipeline (eccdf8e1b4d7)
+- **Jenkins**: Upgrade pipeline
+  ([`eccdf8e`](https://github.com/anaticulae/upainter/commit/eccdf8e1b4d737f13627b629a88dd6ba5299d88a))
+
+- **requirements**: Upgrade requirements.txt
+  ([`73a0e8e`](https://github.com/anaticulae/upainter/commit/73a0e8eb526ac55ed65b45d40613a0fe3be17d72))
+
+### Refactoring
+
+- **replace**: Automated replacement
+  ([`03d65fd`](https://github.com/anaticulae/upainter/commit/03d65fde0b508a501cb2c1a1acea7bdeef87075a))
+
 
 ## v0.13.2 (2022-10-16)
 
-### Chore
+### Chores
 
-* upgrade baw (5e850dad8174)
-* upgrade requirements.txt (9c9e47cece06)
+- **Jenkins**: Upgrade baw
+  ([`5e850da`](https://github.com/anaticulae/upainter/commit/5e850dad81740681362172b5a925c3d17bdde2dc))
+
+- **requirements**: Upgrade requirements.txt
+  ([`9c9e47c`](https://github.com/anaticulae/upainter/commit/9c9e47cece06ef16f6091dbec136f6cf82263dd9))
+
+### Refactoring
+
+- **linter**: Solve linter warning
+  ([`a257d54`](https://github.com/anaticulae/upainter/commit/a257d54ebaef0e35a2947d953a667875a29054b1))
+
 
 ## v0.13.1 (2022-10-10)
 
-### Chore
+### Chores
 
-* upgrade requirements.txt (7e4719656531)
-* convert nightly to all (eae8c602488c)
-* upgrade baw (44e2de23d44a)
-* do not run in privileged mode (cf09aa794e3e)
+- **Jenkinsfile**: Convert nightly to all
+  ([`eae8c60`](https://github.com/anaticulae/upainter/commit/eae8c602488ccc0f353b99635afcc3207c40a559))
+
+- **Jenkinsfile**: Do not run in privileged mode
+  ([`cf09aa7`](https://github.com/anaticulae/upainter/commit/cf09aa794e3e9ddc052ed2920ca9a85a9ab0b067))
+
+- **Jenkinsfile**: Upgrade baw
+  ([`44e2de2`](https://github.com/anaticulae/upainter/commit/44e2de23d44a40639aceac2ca21b5c5ecf15f9c1))
+
+- **requirements**: Upgrade requirements.txt
+  ([`7e47196`](https://github.com/anaticulae/upainter/commit/7e4719656531c4abbaec888d593f9f788ff58fa7))
+
 
 ## v0.13.0 (2022-10-01)
 
-### Chore
+### Chores
 
-* add Jenkinsfile (a083390eac1d)
-* upgrade requirements.txt (90b4974c7c7b)
+- **ci**: Add Jenkinsfile
+  ([`a083390`](https://github.com/anaticulae/upainter/commit/a083390eac1dc79ab1316206f793ee75711d3de7))
 
-## v0.12.3
+- **requirements**: Upgrade requirements.txt
+  ([`90b4974`](https://github.com/anaticulae/upainter/commit/90b4974c7c7b8e67ced14516db15a529f8734774))
 
-### Feature
+### Code Style
 
-* skip empty data item (0fd74b164d3d)
+- **changelog**: Adjust for automation tool
+  ([`ec1e445`](https://github.com/anaticulae/upainter/commit/ec1e44550167d6cb02235434b0a5b0d0e8199aae))
 
-### Fix
 
-* do not fail on missing utilatest (ca6829ce51d8)
+## v0.12.3 (2022-05-22)
 
-## v0.12.2
+### Bug Fixes
 
-### Fix
+- **show**: Do not fail on missing utilatest
+  ([`ca6829c`](https://github.com/anaticulae/upainter/commit/ca6829ce51d8f24deece16a6a38d8b7214938915))
 
-* adjust path (39fac3a93b3c)
+### Chores
 
-## v0.12.1
+- **requirements**: Upgrade requirements.txt
+  ([`826c2b6`](https://github.com/anaticulae/upainter/commit/826c2b6923a721cf0e4bce7c95938f7e065f98ee))
 
-### Feature
+### Features
 
-* add parameter to change file name (7f9702c98749)
+- **pie**: Skip empty data item
+  ([`0fd74b1`](https://github.com/anaticulae/upainter/commit/0fd74b164d3d981373759a8399716dbc60e06380))
 
-### Fix
 
-* adjust image file directory (2abb304f9e57)
+## v0.12.2 (2022-02-23)
 
-## v0.12.0
+### Bug Fixes
 
-### Feature
+- **show**: Adjust path
+  ([`39fac3a`](https://github.com/anaticulae/upainter/commit/39fac3a93b3c975ed40e257bd194b70bb99c1fc3))
 
-* add parameter to plot scatter as subplot (6aebb7c8a459)
-* add hist parameter to modify histogram plot (895f6aed0fd0)
+### Chores
 
-## v0.11.1
+- **requirements**: Adjust Pillow version
+  ([`97abf08`](https://github.com/anaticulae/upainter/commit/97abf083064e8359b7e80e5030963522adbd4da9))
 
-### Fix
 
-* fix always flag (5f0889a7f788)
+## v0.12.1 (2022-02-23)
 
-## v0.11.0
+### Bug Fixes
 
-### Feature
+- **test**: Adjust image file directory
+  ([`2abb304`](https://github.com/anaticulae/upainter/commit/2abb304f9e578b395e0dc8ff6a6d42aa50f66733))
 
-* add option to always show a figure (5b04005dd3f3)
-* add method to determine feature loss while gray scaling (304a04cae30b)
-* ease using API due some auto conversions (de1db537c2a4)
-* add method to gray scale image and determine entropy (002ca0f29c56)
-* add method to create PIL.Image from bytes (e9bfaa6ed3c1)
+### Features
+
+- **show**: Add parameter to change file name
+  ([`7f9702c`](https://github.com/anaticulae/upainter/commit/7f9702c98749e44c29b06388379ba9f1aa6d0a72))
+
+### Refactoring
+
+- **rename**: Rename printer file
+  ([`485f1c2`](https://github.com/anaticulae/upainter/commit/485f1c2b029897720a263aa2fb9c27ed2e4a411a))
+
+
+## v0.12.0 (2022-02-23)
+
+### Features
+
+- **hist**: Add hist parameter to modify histogram plot
+  ([`895f6ae`](https://github.com/anaticulae/upainter/commit/895f6aed0fd059c2301fe6a4e61b730e6e20b08e))
+
+- **scatter**: Add parameter to plot scatter as subplot
+  ([`6aebb7c`](https://github.com/anaticulae/upainter/commit/6aebb7c8a459c55a9e66324f01543ef4324c45f7))
+
+
+## v0.11.1 (2022-02-22)
+
+### Bug Fixes
+
+- **test**: Fix always flag
+  ([`5f0889a`](https://github.com/anaticulae/upainter/commit/5f0889a7f788b42fd1e6f4c8c34b362c2ca0afb0))
+
+
+## v0.11.0 (2022-02-22)
+
+### Chores
+
+- **project**: Move project config
+  ([`f5d1fff`](https://github.com/anaticulae/upainter/commit/f5d1fff568006f491590c48bdf02ce2db6089274))
+
+- **requirements**: Add pillow
+  ([`a5d172f`](https://github.com/anaticulae/upainter/commit/a5d172fcb09fe550e48da068f43b236f10b0af65))
+
+- **requirements**: Upgrade requirements.txt
+  ([`045bb5f`](https://github.com/anaticulae/upainter/commit/045bb5fa8aa97d1a698b0b561e907e62ebe61416))
+
+- **requirements**: Upgrade requirements.txt
+  ([`41fd8ac`](https://github.com/anaticulae/upainter/commit/41fd8ac55bb544f830ff6dc38629e1eb00131bde))
 
 ### Documentation
 
-* adjust modules path (490850faa3fd)
-* Happy New Year! (ae39b6364b0f)
+- **copyright**: Happy New Year!
+  ([`ae39b63`](https://github.com/anaticulae/upainter/commit/ae39b6364b0f9a6b381f55b1517fbed57a5b1a4a))
 
-## v0.10.0
+- **fix**: Adjust modules path
+  ([`490850f`](https://github.com/anaticulae/upainter/commit/490850faa3fd539d3f0623eba16ee8971bc2c108))
 
-### Feature
+### Features
 
-* add intlabel parameter (8017447f31a7)
-* add int label formatter (eaa7149ddfcc)
+- **API**: Ease using API due some auto conversions
+  ([`de1db53`](https://github.com/anaticulae/upainter/commit/de1db537c2a4f81c65d2e6f8bb7a25d40ea60c4e))
 
-## v0.9.4
+- **details**: Add method to determine feature loss while gray scaling
+  ([`304a04c`](https://github.com/anaticulae/upainter/commit/304a04cae30b82b895c78fc8981a504fa2ccca8c))
 
-## v0.9.3
+- **gray**: Add method to gray scale image and determine entropy
+  ([`002ca0f`](https://github.com/anaticulae/upainter/commit/002ca0f29c560a34cb48c954ef8ead51498fea3a))
 
-## v0.9.2
+- **show**: Add option to always show a figure
+  ([`5b04005`](https://github.com/anaticulae/upainter/commit/5b04005dd3f3a64df643f7281c44833c07740bb2))
 
-## v0.9.1
+- **utils**: Add method to create PIL.Image from bytes
+  ([`e9bfaa6`](https://github.com/anaticulae/upainter/commit/e9bfaa6ed3c11ecae8b25835803ee139c7e10eb4))
 
-### Fix
+### Refactoring
 
-* ensure that non markers works correctly (d07aec038546)
+- **entropy**: Move entropy detection into separate module
+  ([`f09ec62`](https://github.com/anaticulae/upainter/commit/f09ec629d40c3717c238b8d864c75540eae395cc))
 
-## v0.9.0
+### Testing
 
-### Feature
+- **gray**: Add another entropy test
+  ([`e2ff28b`](https://github.com/anaticulae/upainter/commit/e2ff28bc91178428c03b1e82dda16c859f867b2d))
 
-* add option to use different colors and markers (09b0be8f284a)
-* add helper to generate colors and markers (9527d0d3a387)
+- **move**: Improve module name
+  ([`a0f8c0e`](https://github.com/anaticulae/upainter/commit/a0f8c0ee2e113005c64499b6539bd11e236e032e))
 
-## v0.8.0
+- **refactor**: Convert example to fixture
+  ([`26bfc7e`](https://github.com/anaticulae/upainter/commit/26bfc7e31cf5604fd610e46c5d05be8c991f924d))
 
-### Feature
+- **refactor**: Convert to fixture
+  ([`666114b`](https://github.com/anaticulae/upainter/commit/666114bb166e107e87e622d68f669190fd2b8ebf))
 
-* add scatter plot renderer (83e8a7771a44)
 
-## v0.7.2
+## v0.10.0 (2021-10-08)
 
-### Fix
+### Chores
 
-* just compute if legends are given (cf70c4822d7a)
+- **requirements**: Upgrade requirements.txt
+  ([`b6dcd6b`](https://github.com/anaticulae/upainter/commit/b6dcd6bd3c4979163727c874e475ecf51d07c4c6))
 
-## v0.7.1
+### Code Style
 
-### Fix
+- **import**: Organize imports
+  ([`de1a641`](https://github.com/anaticulae/upainter/commit/de1a641444be363a7d8fb948db6b75bdc5d7bfe9))
 
-* revert configure order (b070eeeea101)
+### Features
 
-## v0.7.0
+- **utils**: Add int label formatter
+  ([`eaa7149`](https://github.com/anaticulae/upainter/commit/eaa7149ddfccbb15e8aac07701778daaf75a0662))
 
-### Feature
+- **utils**: Add intlabel parameter
+  ([`8017447`](https://github.com/anaticulae/upainter/commit/8017447f31a7e0f2f37b888ad60cd08ccbf2a272))
 
-* inform user about empty rendering (70912c178f4e)
-* add options to define legend (40e93f0c15a7)
+### Refactoring
 
-## v0.6.1
+- **pie**: Simplify code
+  ([`0dc1e44`](https://github.com/anaticulae/upainter/commit/0dc1e448c0593896abe71ba6595d9e9171b53300))
 
-### Feature
+- **plot**: Evaluate configuration later
+  ([`664700c`](https://github.com/anaticulae/upainter/commit/664700c918ec19bcf7f3d9bf6e57bba12a635711))
 
-* add option to close figure after converting to png (a60ab5c20a3a)
 
-## v0.6.0
+## v0.9.4 (2021-06-04)
 
-### Feature
+### Chores
 
-* add line plot renderer (79232dcfd00b)
-* add line style generator (e00991290a9e)
+- **requirements**: Upgrade requirements.txt
+  ([`04172a8`](https://github.com/anaticulae/upainter/commit/04172a83c13fbc157476b89248efbc2cb1614abc))
 
-## v0.5.2
 
-### Fix
+## v0.9.3 (2021-05-22)
 
-* ensure that binary show works (e1a96a6301ba)
+### Chores
 
-## v0.5.1
+- **resources**: Make requirements less strict
+  ([`f0649bf`](https://github.com/anaticulae/upainter/commit/f0649bfcc7350563d682d4b9d01693341284049d))
 
-### Feature
+### Code Style
 
-* add option to show png from path (1dfdbd0ebef2)
+- **format**: Use improve formatter
+  ([`233a2b4`](https://github.com/anaticulae/upainter/commit/233a2b44ba041a43e1f241ff9443848d8fe2a224))
 
-## v0.5.0
+### Testing
 
-### Feature
+- **fix**: Test works on multiple platform
+  ([`b85fc00`](https://github.com/anaticulae/upainter/commit/b85fc008f8e4dc77a3626fa74e0d28286a4d6407))
 
-* add method to display rendered figure (ab9af71e7e86)
 
-## v0.4.0
+## v0.9.2 (2021-05-21)
 
-### Feature
+### Chores
 
-* add method to render pie plot (14a7196992c3)
+- **requirements**: Upgrade requirements.txt
+  ([`17f45c8`](https://github.com/anaticulae/upainter/commit/17f45c8238e05527a5125fad8573d1503ac72728))
 
-## v0.3.3
+- **resources**: Make requirement less strict
+  ([`bb0fdb2`](https://github.com/anaticulae/upainter/commit/bb0fdb2deedfa9481d92e0c77f9b8db5c245ac0b))
 
-### Fix
 
-* do not set ylim if limit is zero (a0cf45f5a45d)
+## v0.9.1 (2021-03-03)
 
-## v0.3.2
+### Bug Fixes
 
-### Feature
+- **scatter**: Ensure that non markers works correctly
+  ([`d07aec0`](https://github.com/anaticulae/upainter/commit/d07aec038546a7f2ae11911649ee2e1a52bf63c3))
 
-* add xlim  to adjust bar plot (9f274f06d1e6)
-* return None for empty data plot (8a966affe414)
 
-## v0.3.1
+## v0.9.0 (2021-03-03)
 
-### Fix
+### Chores
 
-* avoid problems with tkinter back end (a21c035d529c)
+- **requirements**: Upgrade requirements.txt
+  ([`73889b3`](https://github.com/anaticulae/upainter/commit/73889b3dbdd5d527506e8ddbf6935f25394aaead))
 
-## v0.3.0
+### Features
 
-### Feature
+- **scatter**: Add option to use different colors and markers
+  ([`09b0be8`](https://github.com/anaticulae/upainter/commit/09b0be8f284ab6c94ac59fd1c000a362af4a232f))
 
-* add method to define font size for title and x/ylabel (5039332ea49b)
-* add method to render bar plot (dc90a208ddc4)
-* add option to render grid (28e5c159c6f4)
+- **utils**: Add helper to generate colors and markers
+  ([`9527d0d`](https://github.com/anaticulae/upainter/commit/9527d0d3a38750f36cae54a8122ccc0310216ecc))
 
-## v0.2.0
+### Testing
 
-### Feature
+- **scatter**: Verify rendered figure, ensure that render does not change
+  ([`34b3d8e`](https://github.com/anaticulae/upainter/commit/34b3d8ecd032464f89f7334fe2680369bd53b8a6))
 
-* add method to convert figure to png (27533ea88c95)
 
-## v0.1.0
+## v0.8.0 (2021-03-02)
 
-### Feature
+### Features
 
-* add method to render histogram (06ecfef1a6d3)
+- **scatter**: Add scatter plot renderer
+  ([`83e8a77`](https://github.com/anaticulae/upainter/commit/83e8a7771a44055c8b922bdecc6334166b52ae15))
 
-## v0.0.0 Initial release
 
+## v0.7.2 (2021-02-26)
+
+### Bug Fixes
+
+- **plot**: Just compute if legends are given
+  ([`cf70c48`](https://github.com/anaticulae/upainter/commit/cf70c4822d7a9767da95a99be28e67b0797f95b5))
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`1c27d2d`](https://github.com/anaticulae/upainter/commit/1c27d2d64ced7e4fdee273545d24bd8006d7563a))
+
+
+## v0.7.1 (2021-02-24)
+
+### Bug Fixes
+
+- **plot**: Revert configure order
+  ([`b070eee`](https://github.com/anaticulae/upainter/commit/b070eeeea1016788e678d86b8768f16b9f14fd32))
+
+
+## v0.7.0 (2021-02-24)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`a30aa9e`](https://github.com/anaticulae/upainter/commit/a30aa9e2b2ef6ff83067192e0763df64911145b5))
+
+### Features
+
+- **plot**: Add options to define legend
+  ([`40e93f0`](https://github.com/anaticulae/upainter/commit/40e93f0c15a74e859d9734b5ff6c418470997cd2))
+
+- **plot**: Inform user about empty rendering
+  ([`70912c1`](https://github.com/anaticulae/upainter/commit/70912c178f4ea8644f5e0fb579a58b8b6e0ab2f4))
+
+### Refactoring
+
+- **plot**: Configure before render
+  ([`e36871d`](https://github.com/anaticulae/upainter/commit/e36871dad6bdf7565af02a288564415d095cdf26))
+
+
+## v0.6.1 (2021-02-11)
+
+### Features
+
+- **writer**: Add option to close figure after converting to png
+  ([`a60ab5c`](https://github.com/anaticulae/upainter/commit/a60ab5c20a3a057dbb49039ad2891ed430ad6567))
+
+
+## v0.6.0 (2021-02-09)
+
+### Features
+
+- **plot**: Add line plot renderer
+  ([`79232dc`](https://github.com/anaticulae/upainter/commit/79232dcfd00be8bf41ed052fef7d694ae448990f))
+
+- **utils**: Add line style generator
+  ([`e009912`](https://github.com/anaticulae/upainter/commit/e00991290a9ec426e3140bd54829927f8e13236d))
+
+
+## v0.5.2 (2021-02-06)
+
+### Bug Fixes
+
+- **test**: Ensure that binary show works
+  ([`e1a96a6`](https://github.com/anaticulae/upainter/commit/e1a96a6301ba44eae8bff9ff81934833f204946c))
+
+
+## v0.5.1 (2021-02-06)
+
+### Features
+
+- **test**: Add option to show png from path
+  ([`1dfdbd0`](https://github.com/anaticulae/upainter/commit/1dfdbd0ebef20d4a1d28584a11714150cd803e1f))
+
+
+## v0.5.0 (2021-02-06)
+
+### Features
+
+- **painter**: Add method to display rendered figure
+  ([`ab9af71`](https://github.com/anaticulae/upainter/commit/ab9af71e7e86a9a2c9df391639027fa905dc4113))
+
+
+## v0.4.0 (2021-02-06)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`abe0e9f`](https://github.com/anaticulae/upainter/commit/abe0e9fedd0a33d7993860991d55e4e856fd1bc9))
+
+### Features
+
+- **pie**: Add method to render pie plot
+  ([`14a7196`](https://github.com/anaticulae/upainter/commit/14a7196992c38166ae53fa15ec04634b502582c8))
+
+### Refactoring
+
+- **move**: Move x/ylim determination
+  ([`f5c858b`](https://github.com/anaticulae/upainter/commit/f5c858bb4a967f588649123de3a063c7e39b4ec3))
+
+### Testing
+
+- **refactor**: Clarify test name
+  ([`e18f40d`](https://github.com/anaticulae/upainter/commit/e18f40ddb8c2e376c6e1878c5110ac72f3bbc913))
+
+
+## v0.3.3 (2021-02-06)
+
+### Bug Fixes
+
+- **bar**: Do not set ylim if limit is zero
+  ([`a0cf45f`](https://github.com/anaticulae/upainter/commit/a0cf45f5a45d3e5d0bef327c6286be9d56b6ff9f))
+
+
+## v0.3.2 (2021-02-06)
+
+### Features
+
+- **bar**: Add xlim to adjust bar plot
+  ([`9f274f0`](https://github.com/anaticulae/upainter/commit/9f274f06d1e69bf41878e8ec9371cd95fa70a895))
+
+- **bar**: Return None for empty data plot
+  ([`8a966af`](https://github.com/anaticulae/upainter/commit/8a966affe4143ede9ba67b1fe853c478a078b783))
+
+
+## v0.3.1 (2021-01-24)
+
+### Bug Fixes
+
+- **backend**: Avoid problems with tkinter back end
+  ([`a21c035`](https://github.com/anaticulae/upainter/commit/a21c035d529c91cd4b9014ea05f4755932429750))
+
+
+## v0.3.0 (2021-01-24)
+
+### Features
+
+- **bar**: Add method to render bar plot
+  ([`dc90a20`](https://github.com/anaticulae/upainter/commit/dc90a208ddc423903cfc948ed868fc1ecf11478f))
+
+- **configure**: Add option to render grid
+  ([`28e5c15`](https://github.com/anaticulae/upainter/commit/28e5c159c6f46b8e00dce8d0beb0e2d8cc80da3f))
+
+- **utils**: Add method to define font size for title and x/ylabel
+  ([`5039332`](https://github.com/anaticulae/upainter/commit/5039332ea49b3e11f7456ca7de9091dfc19d01c1))
+
+### Refactoring
+
+- **utils**: Add configure to save code
+  ([`f03fc2d`](https://github.com/anaticulae/upainter/commit/f03fc2d5a826beca0310a589e397bc7513d4bb29))
+
+### Testing
+
+- **utils**: Add method to render png after executing single test
+  ([`5058a2a`](https://github.com/anaticulae/upainter/commit/5058a2a52fbbd1c2649f8b45548352f0df340681))
+
+
+## v0.2.0 (2021-01-24)
+
+### Features
+
+- **writer**: Add method to convert figure to png
+  ([`27533ea`](https://github.com/anaticulae/upainter/commit/27533ea88c95491f454a315ec940621abfdde2cd))
+
+### Refactoring
+
+- **test**: Increase re usability
+  ([`e41db07`](https://github.com/anaticulae/upainter/commit/e41db07ad85805097f5ad686b7a2925f1f430987))
+
+
+## v0.1.0 (2021-01-24)
+
+### Chores
+
+- **requirements**: Add matplotlib
+  ([`1a1749b`](https://github.com/anaticulae/upainter/commit/1a1749be9c538e362ce7966934de3813f1fedbe7))
+
+- **requirements**: Add utila
+  ([`9621ef6`](https://github.com/anaticulae/upainter/commit/9621ef6269370fa4f1df1d98966c343b16014550))
+
+- **requirements**: Add utilatest
+  ([`fbc126a`](https://github.com/anaticulae/upainter/commit/fbc126a8a88b8046c2d0760ff929912b299573c1))
+
+### Features
+
+- **histogram**: Add method to render histogram
+  ([`06ecfef`](https://github.com/anaticulae/upainter/commit/06ecfef1a6d39783378987d1deb8e13959a98f35))
+
+
+## v0.0.0 (2021-01-24)
+
+- Initial Release
