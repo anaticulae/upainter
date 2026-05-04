@@ -10,7 +10,7 @@
 import contextlib
 import os
 
-import utila
+import utilo
 
 import painter
 
@@ -18,25 +18,25 @@ import painter
 def show_figure(figure, always: bool = False, filename: str = 'painted.png'):
     if not always and not single_execution():
         return
-    if not utila.exists(figure):
-        root = utila.path_parent(__file__)
-        with utila.make_tmpdir(root=root) as temp:
+    if not utilo.exists(figure):
+        root = utilo.path_parent(__file__)
+        with utilo.make_tmpdir(root=root) as temp:
             png = os.path.join(temp, filename)
             # write png
             if painter.isimage(figure):
                 figure.save(png)
             elif isinstance(figure, bytes):
-                utila.file_create_binary(png, figure)
+                utilo.file_create_binary(png, figure)
             else:
                 painter.save(figure, png)
     else:
         png = figure
     # open png
-    utila.run(f'start {png}')
+    utilo.run(f'start {png}')
 
 
 def single_execution() -> bool:
     with contextlib.suppress(ModuleNotFoundError):
-        import utilatest
-        return utilatest.single_execution()
+        import utilotest
+        return utilotest.single_execution()
     return False

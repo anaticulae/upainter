@@ -7,14 +7,14 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import utila
+import utilo
 
 import painter
 
 
 def test_plot_render():
-    x = [item * 0.5 for item in utila.rlist(10)]
-    y = utila.rlist(10)
+    x = [item * 0.5 for item in utilo.rlist(10)]
+    y = utilo.rlist(10)
     legends = ['first', 'second']
     labels = [f'label {item}' for item in range(10)]
     rendered = painter.plot_render(

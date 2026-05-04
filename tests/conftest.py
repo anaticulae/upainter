@@ -7,8 +7,8 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-from utilatest import mp  # pylint:disable=W0611
-from utilatest import td  # pylint:disable=W0611
+from utilotest import mp  # pylint:disable=W0611
+from utilotest import td  # pylint:disable=W0611
 
 # pylint:disable=W0611,C0413
 from tests.test_histogram import histogram_example
