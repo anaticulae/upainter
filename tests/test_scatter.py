@@ -8,8 +8,7 @@
 # =============================================================================
 
 import pytest
-
-import painter
+import upainter
 
 
 def test_scatter_render_colored_legend():
@@ -22,15 +21,15 @@ def test_scatter_render_colored_legend():
         (33, 'fourth'),
         (99, 'fifth'),
     ]
-    rendered = painter.scatter_render(
+    rendered = upainter.scatter_render(
         x,
         y,
         legend=legend,
         grid=True,
     )
     assert rendered
-    painter.show_figure(rendered)
-    rendered = painter.png(rendered)
+    upainter.show_figure(rendered)
+    rendered = upainter.png(rendered)
     assert len(rendered) in {17483, 17519,
                              17484}  # rendering changes, verify figure!
 
@@ -44,7 +43,7 @@ def test_scatter_render_legend_no_value():
         'fourth',
         'fifth',
     ]
-    rendered = painter.scatter_render(
+    rendered = upainter.scatter_render(
         x,
         y,
         legend=legend,
@@ -52,24 +51,24 @@ def test_scatter_render_legend_no_value():
         grid=True,
     )
     assert rendered
-    painter.show_figure(rendered)
-    rendered = painter.png(rendered)
+    upainter.show_figure(rendered)
+    rendered = upainter.png(rendered)
     assert len(rendered) in {17564, 17565}  # rendering changes, verify figure!
 
 
 def test_scatter_render_no_marker():
     x, y = [10, 20, 15, 12, 50], [50, 20, 10, 33, 14]
-    rendered = painter.scatter_render(x, y)
+    rendered = upainter.scatter_render(x, y)
     assert rendered
-    painter.show_figure(rendered)
-    rendered = painter.png(rendered)
+    upainter.show_figure(rendered)
+    rendered = upainter.png(rendered)
     assert len(rendered) in {10400, 10401}  # rendering changes, verify figure!
 
 
 def test_scatter_empty():
     x, y = [], []
     with pytest.raises(ValueError, match='require some data'):
-        painter.scatter_render(
+        upainter.scatter_render(
             x,
             y,
         )
@@ -77,13 +76,13 @@ def test_scatter_empty():
 
 def test_scatter_unequal_length():
     with pytest.raises(ValueError, match='must be the same size'):
-        painter.scatter_render(
+        upainter.scatter_render(
             x=[20, 30],
             y=[20, 10, 11],
         )
 
     with pytest.raises(ValueError, match='legend must be the same size'):
-        painter.scatter_render(
+        upainter.scatter_render(
             x=[20, 30],
             y=[20, 10],
             legend=['abc'],

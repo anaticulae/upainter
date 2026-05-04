@@ -14,8 +14,7 @@ import matplotlib.figure
 import matplotlib.pyplot
 import matplotlib.ticker
 import PIL.Image
-
-import painter
+import upainter
 
 
 def configure(**kwargs):  # pylint:disable=R1260
@@ -124,7 +123,7 @@ def image_frombytes(png):
 
 
 def figure_toimage(figure):
-    png = painter.png(figure)
+    png = upainter.png(figure)
     result = image_frombytes(png)
     return result
 

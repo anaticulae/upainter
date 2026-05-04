@@ -1,5 +1,5 @@
 [project]
-name = "painter"
+name = "upainter"
 version = "0.13.3"
 description = ""
 readme = {file = "README", content-type = "text/markdown"}
@@ -31,8 +31,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/anaticulae/painter"
-Repository = "https://github.com/anaticulae/painter"
+Homepage = "https://github.com/anaticulae/upainter"
+Repository = "https://github.com/anaticulae/upainter"
 
 [build-system]
 requires = [
@@ -55,7 +55,7 @@ patch_tags = ["fix", "perf", "build", "chore", "ci", "docs", "style", "refactor"
 [tool.setuptools.packages.find]
 where = ["."]
 include = [
-    'painter',
+    'upainter',
 ]
 exclude = [
     "tests*",

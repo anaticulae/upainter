@@ -8,8 +8,7 @@
 # =============================================================================
 
 import PIL.ImageFilter
-
-import painter
+import upainter
 
 
 def entropy(image):
@@ -17,7 +16,7 @@ def entropy(image):
 
 
 def entropy_diff(image) -> float:
-    grayscaled = painter.gray(image)
+    grayscaled = upainter.gray(image)
     before = entropy(image)
     after = entropy(grayscaled)
     diff = before - after
@@ -25,12 +24,12 @@ def entropy_diff(image) -> float:
 
 
 def contour(image):
-    image = painter.ensure_image(image)
+    image = upainter.ensure_image(image)
     return image.filter(PIL.ImageFilter.CONTOUR)
 
 
 def contour_diff(image):
-    image = painter.ensure_image(image)
+    image = upainter.ensure_image(image)
     before = contour(image)
     before = feature_count(before)
     grayscaled = image.convert('L')
@@ -43,7 +42,7 @@ def contour_diff(image):
 
 
 def feature_count(image) -> int:
-    image = painter.ensure_image(image)
+    image = upainter.ensure_image(image)
     image = image.convert('L')
     histo = image.histogram()[0]
     return histo

@@ -7,12 +7,12 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import painter
+import upainter
 
 
 def test_png(histogram_example):
     rendered = histogram_example
     # render into bytes
-    result = painter.png(rendered)
+    result = upainter.png(rendered)
     assert isinstance(result, bytes)
     assert len(result) > 10000

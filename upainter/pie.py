@@ -9,8 +9,7 @@
 
 import matplotlib.figure
 import matplotlib.pyplot
-
-import painter.utils
+import upainter.utils
 
 
 def render(
@@ -22,7 +21,7 @@ def render(
     """\
     #absolute: use values instead of percentage
     """
-    fig = painter.utils.configure(**kwargs)[0]
+    fig = upainter.utils.configure(**kwargs)[0]
     label_fontsize = kwargs.get('label_fontsize', 20)
 
     def selector(item):

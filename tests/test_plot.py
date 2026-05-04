@@ -7,9 +7,8 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import upainter
 import utilo
-
-import painter
 
 
 def test_plot_render():
@@ -17,7 +16,7 @@ def test_plot_render():
     y = utilo.rlist(10)
     legends = ['first', 'second']
     labels = [f'label {item}' for item in range(10)]
-    rendered = painter.plot_render(
+    rendered = upainter.plot_render(
         x,
         y,
         labels=labels,
@@ -26,4 +25,4 @@ def test_plot_render():
         ncol=5,
     )
     assert rendered
-    painter.show_figure(rendered)
+    upainter.show_figure(rendered)

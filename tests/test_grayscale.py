@@ -7,16 +7,16 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import painter
+import upainter
 
 
 def test_gray(pie_example):
     painted = pie_example
-    png = painter.png(painted)
-    image = painter.image_frombytes(png)
+    png = upainter.png(painted)
+    image = upainter.image_frombytes(png)
     before = len(image.histogram())
     # reduce amount of colors
-    gray = painter.gray(image)
+    gray = upainter.gray(image)
     after = len(gray.histogram())
     # 1024 - 256
     diff = before - after

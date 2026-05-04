@@ -10,9 +10,8 @@
 import contextlib
 import os
 
+import upainter
 import utilo
-
-import painter
 
 
 def show_figure(figure, always: bool = False, filename: str = 'painted.png'):
@@ -23,12 +22,12 @@ def show_figure(figure, always: bool = False, filename: str = 'painted.png'):
         with utilo.make_tmpdir(root=root) as temp:
             png = os.path.join(temp, filename)
             # write png
-            if painter.isimage(figure):
+            if upainter.isimage(figure):
                 figure.save(png)
             elif isinstance(figure, bytes):
                 utilo.file_create_binary(png, figure)
             else:
-                painter.save(figure, png)
+                upainter.save(figure, png)
     else:
         png = figure
     # open png

@@ -10,14 +10,13 @@
 import os
 
 import pytest
-
-import painter
+import upainter
 
 
 @pytest.fixture
 def histogram_example():
     data = [1994, 1998, 2002, 2002, 2003, 2000]
-    rendered = painter.histogram_render(
+    rendered = upainter.histogram_render(
         data,
         width=10.0,  # 1000 pixel
         height=6.0,  # 600 pixel
@@ -31,5 +30,5 @@ def histogram_example():
 
 @pytest.mark.usefixtures('td')
 def test_histogram_render(histogram_example):  # pylint:disable=W0621
-    painter.save(histogram_example, 'figure')
+    upainter.save(histogram_example, 'figure')
     assert os.path.exists('figure')

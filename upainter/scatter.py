@@ -10,9 +10,8 @@
 import itertools
 
 import matplotlib.figure
-
-import painter
-import painter.utils
+import upainter
+import upainter.utils
 
 
 def render(
@@ -34,14 +33,14 @@ def render(
     if legend and len(legend) != len(x):
         raise ValueError('legend must be the same size')
     if not subplot:
-        fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
+        fig, ax = upainter.utils.configure(**kwargs)  # pylint:disable=C0103
     else:
         fig, ax = None, matplotlib.pyplot
 
-    marker = marker if marker else painter.default_markers()
+    marker = marker if marker else upainter.default_markers()
     legend: itertools.cycle = legend if legend else itertools.cycle([None])
 
-    for xx, yy, cc, mm, ll in zip(x, y, painter.colors(), marker, legend):  # pylint:disable=C0103
+    for xx, yy, cc, mm, ll in zip(x, y, upainter.colors(), marker, legend):  # pylint:disable=C0103
         if ll and not isinstance(ll, str):
             cc, ll = ll  # pylint:disable=C0103
         if ll:

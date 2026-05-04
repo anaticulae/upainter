@@ -8,8 +8,7 @@
 # =============================================================================
 
 import pytest
-
-import painter
+import upainter
 
 
 @pytest.fixture
@@ -22,7 +21,7 @@ def pie_example():
         'Dome',
         'Erni',
     ]
-    rendered = painter.pie_render(
+    rendered = upainter.pie_render(
         x=data,
         labels=labels,
     )
@@ -32,4 +31,4 @@ def pie_example():
 def test_pie_render(pie_example):  # pylint:disable=W0621
     rendered = pie_example
     assert rendered
-    painter.show_figure(rendered)
+    upainter.show_figure(rendered)

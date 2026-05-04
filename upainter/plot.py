@@ -10,9 +10,8 @@
 import matplotlib.figure
 import matplotlib.pyplot
 import matplotlib.ticker
-
-import painter.__patch__
-import painter.utils
+import upainter.__patch__
+import upainter.utils
 
 
 def render(
@@ -23,13 +22,13 @@ def render(
 ) -> matplotlib.figure.Figure:
     if not args:
         raise ValueError(f'empty data: {args}')
-    fig, ax = painter.utils.configure(**kwargs)  # pylint:disable=C0103
+    fig, ax = upainter.utils.configure(**kwargs)  # pylint:disable=C0103
     # render x-label if given
     if labels:
-        ax.xaxis.set_major_formatter(painter.__patch__.IndexFormatter(labels))
+        ax.xaxis.set_major_formatter(upainter.__patch__.IndexFormatter(labels))
         ax.xaxis.set_major_locator(matplotlib.ticker.IndexLocator(1, 0))
     # render math content
-    for line, style in zip(args, painter.utils.linestyle()):
+    for line, style in zip(args, upainter.utils.linestyle()):
         matplotlib.pyplot.plot(line, style)
     # render legends if given
     if legends:

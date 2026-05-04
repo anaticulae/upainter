@@ -8,11 +8,10 @@
 # =============================================================================
 
 import PIL.ImageOps
-
-import painter
+import upainter
 
 
 def gray(image):
-    image = painter.ensure_image(image)
+    image = upainter.ensure_image(image)
     result = PIL.ImageOps.grayscale(image)
     return result

@@ -1,7 +1,6 @@
 [project]
-short = painter
+short = upainter
 name = draw the world
 
 [release]
 fail_on_finding = True
-

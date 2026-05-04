@@ -1,3 +1,4 @@
+# pylint:disable=C0102
 # =============================================================================
 # C O P Y R I G H T
 # -----------------------------------------------------------------------------
@@ -9,29 +10,17 @@
 
 import matplotlib.figure
 import matplotlib.pyplot
+import upainter.utils
 
-import painter.utils
 
-
-def render(
-    data: list,
-    width: float = 5.12,  # 512 pixel
-    height: float = 5.12,  # 512 pixel
-    title: str = None,
-    xlabel: str = None,
-    ylabel: str = None,
-    hist: dict = None,
-    **kwargs,
-) -> matplotlib.figure.Figure:
-    fig, _ = painter.utils.configure(
-        width=width,
-        height=height,
-        title=title,
-        xlabel=xlabel,
-        ylabel=ylabel,
-        **kwargs,
-    )
-    if hist is None:
-        hist = {}
-    matplotlib.pyplot.hist(data, **hist)
+def render(x, y, **kwargs) -> matplotlib.figure.Figure:  # pylint:disable=C0103
+    fig, ax = upainter.utils.configure(**kwargs)  # pylint:disable=C0103
+    if not y:
+        return None
+    ylim = kwargs.get('ylim', None)
+    if not ylim:
+        ymax = max(y) * 1.1
+        if ymax:
+            ax.set_ylim((0, ymax))
+    matplotlib.pyplot.bar(x=x, height=y, width=0.5)
     return fig

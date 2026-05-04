@@ -7,12 +7,12 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import painter
+import upainter
 
 
 def test_bar_render_with_labels():
     data = [0, 1, 2, 3, 4, 5, 6, 7]
-    rendered = painter.bar_render(
+    rendered = upainter.bar_render(
         x=data,
         y=data,
         title='simple bar plot',
@@ -21,12 +21,12 @@ def test_bar_render_with_labels():
         grid=True,
     )
     assert rendered
-    painter.show_figure(rendered)
+    upainter.show_figure(rendered)
 
 
 def test_bar_render_empty():
     data = []
-    rendered = painter.bar_render(
+    rendered = upainter.bar_render(
         x=data,
         y=data,
     )
@@ -34,12 +34,12 @@ def test_bar_render_empty():
 
 
 def test_bar_render_ints():
-    rendered = painter.bar_render(
+    rendered = upainter.bar_render(
         x=[1, 2, 3, 4],
         y=[1, 2, 3, 4],
         intlabel=(False, True),
     )
     assert rendered
-    painter.show_figure(rendered)
-    rendered = painter.png(rendered)
+    upainter.show_figure(rendered)
+    rendered = upainter.png(rendered)
     assert len(rendered) in {6174, 6175}  # rendering changes, verify figure!
