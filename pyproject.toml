@@ -27,7 +27,7 @@ license-files = ["LICENSE"]
 
 [project.optional-dependencies]
 dev = [
-    "utilotest>=1.0.1,<2.0.0",
+    "utilotest>=1.0.3,<2.0.0",
 ]
 
 [project.urls]
