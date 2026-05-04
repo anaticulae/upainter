@@ -37,7 +37,7 @@ def render(
         labels=labels,
         radius=1,
         autopct=selector if absolute else '%d',
-        textprops=dict(size=label_fontsize),
+        textprops={'size': label_fontsize},
     )
     return fig
 
